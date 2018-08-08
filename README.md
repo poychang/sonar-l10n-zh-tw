@@ -1,27 +1,32 @@
-The Chinese translation pack for SonarQube
+The Traditional Chinese translation pack for SonarQube
 =======
 
-Author: Xu Huisheng <xyz20003@gmail.com>
+Author: Poy Chang <poypost@gmail.com>
 
-Latest version: (https://github.com/SonarQubeCommunity/sonar-l10n-zh/releases/latest)
+Latest version: (https://github.com/poychang/sonar-l10n-zh-tw/releases/latest)
 
 compatibility Matrix: 
 
 ---
 
-这是SonarQube的汉化包
+這是 SonarQube 的繁體中文包
 
-兼容列表如下：
+相容列表如下：
 
-**SonarQube** |**7.0**|**7.1**|**7.2**|       |       |       |       |       |
---------------|-------|-------|-------|-------|-------|-------|-------|-------|
-sonar-l10n-zh |1.20   |1.21   |1.22   |       |       |       |       |       |
-**SonarQube** |**6.0**|**6.1**|**6.2**|**6.3**|**6.4**|**6.5**|**6.6**|**6.7**|
-sonar-l10n-zh |1.12   |1.13   |1.14   |1.15   |1.16   |1.17   |1.18   |1.19   |
-**SonarQube** |       |       |       |       |**5.4**|**5.5**|**5.6**|       |
-sonar-l10n-zh |       |       |       |       |1.9    |1.10   |1.11   |       |
-**SonarQube** |**4.0**|**4.1**|       |       |       |       |       |       |
-sonar-l10n-zh |1.7    |1.8    |       |       |       |       |       |       |
-**SonarQube** |       |**3.1**|**3.2**|**3.3**|**3.4**|**3.5**|**3.6**|**3.7**|
-sonar-l10n-zh |       |1.0    |1.1    |1.2    |1.3    |1.4    |1.5    |1.6    |
+**SonarQube**    |**7.0**|**7.1**|**7.2**|       |       |       |       |       |
+-----------------|-------|-------|-------|-------|-------|-------|-------|-------|
+sonar-l10n-zh-tw |       |       |7.2    |       |       |       |       |       |
 
+## 安裝方式
+
+請至 [Release](https://github.com/poychang/sonar-l10n-zh-tw/releases) 下載最新版的 `.jar` 檔，下載完成後複製至 SonarQube 安裝目錄下的 `\extensions\plugins` 資料夾中，重新啟動系統即可。
+
+## 開發相關
+
+升版時請同步修改下列 2 個檔案：
+
+* `pom.xml`
+    * 修改 `<version>` 區段的版本號
+* `.travis.yml` 
+    * 修改 `before_deploy` 的 `git tag` 指令
+    * 修改 `deploy` 的 `file` 檔名
