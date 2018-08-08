@@ -5,7 +5,7 @@
   <groupId>org.sonarqube.l10n.zh</groupId>
   <artifactId>sonar-l10n-zh-tw-plugin</artifactId>
   <packaging>sonar-plugin</packaging>
-  <version>1.23-SNAPSHOT</version>
+  <version>7.2.1</version>
 
   <name>L10n :: Traditional Chinese Pack</name>
   <url>https://github.com/poychang/sonar-l10n-zh-tw</url>

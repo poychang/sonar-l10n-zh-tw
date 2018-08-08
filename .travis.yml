@@ -14,3 +14,14 @@ cache:
 
 notifications:
   email: false
+
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "${GH_NAME}"
+  - git config --local user.email "${GH_EMAIL}"
+  - git tag "sonar-l10n-zh-tw-plugin-7.2.1"
+deploy:
+  provider: releases
+  api_key: "${GH_TOKEN}"
+  file: "target/sonar-l10n-zh-tw-plugin-7.2.1.jar"
+  skip_cleanup: true
