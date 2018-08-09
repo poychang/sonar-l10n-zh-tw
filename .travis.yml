@@ -13,15 +13,17 @@ cache:
     - '$HOME/.m2/repository'
 
 notifications:
-  email: false
+  email: poypost@gmail.com
 
 before_deploy:
   # Set up git user name and tag this commit
   - git config --local user.name "${GH_NAME}"
   - git config --local user.email "${GH_EMAIL}"
-  - git tag "sonar-l10n-zh-tw-plugin-7.2.1"
+  - git tag "sonar-l10n-zh-tw-plugin-7.2.${TRAVIS_BUILD_NUMBER}"
+  - mv target/sonar-l10n-zh-tw-plugin-7.2.jar target/sonar-l10n-zh-tw-plugin-7.2.${TRAVIS_BUILD_NUMBER}.jar
+
 deploy:
   provider: releases
   api_key: "${GH_TOKEN}"
-  file: "target/sonar-l10n-zh-tw-plugin-7.2.1.jar"
+  file: "target/sonar-l10n-zh-tw-plugin-7.2.${TRAVIS_BUILD_NUMBER}.jar"
   skip_cleanup: true
